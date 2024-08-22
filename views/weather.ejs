@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather in <%= city %></h1>
+        <% if (weather) { %>
+            <p>Temperature: <%= weather.main.temp %>°C</p>
+            <p>Weather: <%= weather.weather[0].description %></p>
+            <p>Humidity: <%= weather.main.humidity %>%</p>
+        <% } else { %>
+            <p><%= error %></p>
+        <% } %>  
+        <a href="/" class="search">Go Back</a>
+    </div> 
+</body>
+</html>
